@@ -52,9 +52,9 @@ public class q4 {
     public long cycle(int n, String str, ArrayList<Integer> list) {
         
         for (int i = 0; i < 10; i++) {
-            timeBegin = System.currentTimeMillis();
+            timeBegin = System.nanoTime();
             determineAlgo(str, list, n);
-            timeEnd = System.currentTimeMillis();
+            timeEnd = System.nanoTime();
             totalTime10Times += (timeEnd - timeBegin);
             list = new ArrayList<>();
         }
@@ -123,7 +123,7 @@ public class q4 {
                 long time = sol.cycle(i, algName, list);
                 System.out.println("list size: " + list.size());
 
-                System.out.println("Computation ended. " + "alg: " + algName + ". rep: " + i + ". Total time: " + time + " milliseconds.");
+                System.out.println("Computation ended. " + "alg: " + algName + ". rep: " + i + ". Total time: " + time + " nanoseconds.");
             }
         }
         
